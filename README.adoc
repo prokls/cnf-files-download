@@ -24,35 +24,39 @@ And I also considered one non-competitive CNF collection:
 Remarks
 -------
 
+`01_download.sh` downloads files from an URL asynchronously and checks its SHA1 hashsum.
+`02_decompress.sh` decompresses files such that CNF files can be used by SAT solvers.
+
 * MaxSAT benchmark files are not considered (different goal than simple SAT).
   The general URL is http://www.maxsat.udl.cat/[maxsat.udl.cat]
 * I consider http://lukas-prokop.at/blog/2016/08/an-empty-clause-represents-a-contradiction/[empty clauses] to yield UNSAT immediately and are therefore pointless. I needed a blacklist.
 ** You can find files with empty clauses in the following files of SATlib:
-*** ./uuf200-860/UUF200.860.1000/*
-*** ./uf100-430/uf100-*
-*** ./uf20-91/uf20-*
-*** ./uf125-538/ai/hoos/Research/SAT/Formulae/UF125.538.100/*
-*** ./uf75-325/ai/hoos/Shortcuts/UF75.325.100/uf75-*
-*** ./uuf175-753/UUF175.753.100/uuf175-*
-*** ./uuf175-753/UUF175.753.100/uuf125-*
-*** ./uuf50-218/UUF50.218.1000/uuf50-*
-*** ./uuf100-430/UUF100.430.1000/uuf100-*
-*** ./uuf75-325/UUF75.325.100/uuf75-*
-*** ./uf250-1065/ai/hoos/Shortcuts/UF250.1065.100/uf250-*
-*** ./uf225-960/ai/hoos/Shortcuts/UF225.960.100/uf225-*
-*** ./uuf225-960/UUF225.960.100/uuf225-*
-*** ./uf50-218/uf50-*
-*** ./uf175-753/ai/hoos/Research/SAT/Formulae/UF175.753.100/uf175-*
-*** ./uuf150-645/UUF150.645.100/uuf150-*
-*** ./uuf250-1065/UUF250.1065.100/uuf250-*
-*** ./uf150-645/ai/hoos/Research/SAT/Formulae/UF150.645.100/uf150-*
-*** ./uf200-860/uf200-*
+*** `./uuf200-860/UUF200.860.1000/*`
+*** `./uf100-430/uf100-*`
+*** `./uf20-91/uf20-*`
+*** `./uf125-538/ai/hoos/Research/SAT/Formulae/UF125.538.100/*`
+*** `./uf75-325/ai/hoos/Shortcuts/UF75.325.100/uf75-*`
+*** `./uuf175-753/UUF175.753.100/uuf175-*`
+*** `./uuf175-753/UUF175.753.100/uuf125-*`
+*** `./uuf50-218/UUF50.218.1000/uuf50-*`
+*** `./uuf100-430/UUF100.430.1000/uuf100-*`
+*** `./uuf75-325/UUF75.325.100/uuf75-*`
+*** `./uf250-1065/ai/hoos/Shortcuts/UF250.1065.100/uf250-*`
+*** `./uf225-960/ai/hoos/Shortcuts/UF225.960.100/uf225-*`
+*** `./uuf225-960/UUF225.960.100/uuf225-*`
+*** `./uf50-218/uf50-*`
+*** `./uf175-753/ai/hoos/Research/SAT/Formulae/UF175.753.100/uf175-*`
+*** `./uuf150-645/UUF150.645.100/uuf150-*`
+*** `./uuf250-1065/UUF250.1065.100/uuf250-*`
+*** `./uf150-645/ai/hoos/Research/SAT/Formulae/UF150.645.100/uf150-*`
+*** `./uf200-860/uf200-*`
 ** Be aware that supposedly "%" in an individual line (is not to be ignored but) terminates the CNF file and therefore empty clauses do not occur with this kind of semantics. However, an actual empty clause was found in SAT Race 2010 files:
-*** ./software-verification/post/zfcp.cnf at line 695486
+*** `./software-verification/post/zfcp.cnf` at line 695486
 * I couldn't decompress the following files with my xubuntu/debian software stack in SATlib:
-** gzip: dlx_iq_unsat_2.0/1dlx_c_mc_ex_bp_f_iq33_a.cnf.gz: **invalid compressed data--crc error**
-** gzip: dlx_iq_unsat_2.0/1dlx_c_mc_ex_bp_f_iq33_a.cnf.gz: **invalid compressed data--length error**
-** gzip: vliw_sat_2.0/9dlx_vliw_at_b_iq6_bug10.cnf.gz: **unexpected end of file**
+** `gzip: dlx_iq_unsat_2.0/1dlx_c_mc_ex_bp_f_iq33_a.cnf.gz`: **invalid compressed data--crc error**
+** `gzip: dlx_iq_unsat_2.0/1dlx_c_mc_ex_bp_f_iq33_a.cnf.gz`: **invalid compressed data--length error**
+** `gzip: vliw_sat_2.0/9dlx_vliw_at_b_iq6_bug10.cnf.gz`: **unexpected end of file**
+* `sc14-app.tar` of SAT competition 2014 contains an empty archive `sc14-app.tar` in itself
 
 best regards,
 prokls

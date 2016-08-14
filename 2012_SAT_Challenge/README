@@ -1,0 +1,1 @@
+Recursively extract compressed files by running: find directory/ -name *.lzma -exec unxz {} \;
