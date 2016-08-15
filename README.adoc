@@ -28,7 +28,7 @@ Remarks
 `02_decompress.sh` decompresses files such that CNF files can be used by SAT solvers.
 
 * On UNIX, you can list all CNF files using `find . -type f -name '*.cnf'` and all non-CNF files using `find . -type f ! -name '*.cnf'`
-* SAT competition 2014 contains many hidden lzma files. The contained CNF files cannot be decoded correctly and are therefore skipped.
+* SAT competition 2014 contains many hidden lzma files. The contained CNF files cannot be decoded correctly and are therefore skipped. Equivalent non-hidden files exist and constitute actual CNF files.
 * MaxSAT benchmark files are not considered (different goal than simple SAT).
   The general URL is http://www.maxsat.udl.cat/[maxsat.udl.cat]
 * I consider http://lukas-prokop.at/blog/2016/08/an-empty-clause-represents-a-contradiction/[empty clauses] to yield UNSAT immediately and are therefore pointless. I needed a blacklist.
