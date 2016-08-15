@@ -2,7 +2,7 @@
 
 set -e
 
-un-7z  () { mkdir "${1:r}"; cd "${1:r}"; 7za e "../$1"; cd .. }
+un-7z  () { mkdir "${1:r}"; cd "${1:r}"; 7za x "../$1"; cd .. }
 
 
 # decompress archive
