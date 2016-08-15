@@ -167,7 +167,6 @@ un-gz SAT-Race_TS_2/velev-pipe-sat-1.1-01.cnf.gz
 un-gz SAT-Race_TS_2/velev-pipe-sat-1.1-09.cnf.gz
 un-gz SAT-Race_TS_2/velev-pipe-uns-1.1-03.cnf.gz
 un-gz SAT-Race_TS_2/schup-l2s-s04s2-09.cnf.gz
-un-gz SAT-Race_TS_2/TS2-Solvers2005-results.txt
 un-gz SAT-Race_TS_2/manol-pipe-f6i.cnf.gz
 un-gz SAT-Race_TS_2/velev-vliw-sat-4.0-03.cnf.gz
 un-gz SAT-Race_TS_2/manol-pipe-g8n.cnf.gz
