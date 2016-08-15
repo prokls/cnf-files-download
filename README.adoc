@@ -29,6 +29,7 @@ Remarks
 
 * On UNIX, you can list all CNF files using `find . -type f -name '*.cnf'` and all non-CNF files using `find . -type f ! -name '*.cnf'`
 * SAT competition 2014 contains many hidden lzma files. The contained CNF files cannot be decoded correctly and are therefore skipped. Equivalent non-hidden files exist and constitute actual CNF files.
+* It's kind of awkward but even within a testsuite, duplicate files might occur. One example is `Agile/bench_91.smt2.cnf` as duplicate of `Agile/bench_13367.smt2.cnf` in CNF files of SAT 2016 competition.
 * MaxSAT benchmark files are not considered (different goal than simple SAT).
   The general URL is http://www.maxsat.udl.cat/[maxsat.udl.cat]
 * I consider http://lukas-prokop.at/blog/2016/08/an-empty-clause-represents-a-contradiction/[empty clauses] to yield UNSAT immediately and are therefore pointless. I needed a blacklist.
