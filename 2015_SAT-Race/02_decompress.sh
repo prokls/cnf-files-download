@@ -8,7 +8,7 @@ set -e
 
 un-zip   () { mkdir "${1:r}" && cd "${1:r}" && unzip "../$1" && cd .. }
 un-targz () { tar -zxvf "$1" }
-un-tar7z () { 7z x "$1" && tar -xvf "${1:r}" -C "${1:r:r}" && rm "${1:r}" }
+un-tar7z () { mkdir "${1:r:r}" && 7z x "$1" && tar -xvf "${1:r}" -C "${1:r:r}" && rm "${1:r}" }
 
 
 # decompress archives
