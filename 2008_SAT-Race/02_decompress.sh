@@ -116,7 +116,6 @@ un-gz cnf/velev-npe-1.0-9dlx-b71.cnf.gz
 un-gz SAT-Race_TS_1/grieu-vmpc-s05-27r.cnf.gz
 un-gz SAT-Race_TS_1/manol-pipe-g6bid.cnf.gz
 un-gz SAT-Race_TS_1/goldb-heqc-rotmul.cnf.gz
-un-gz SAT-Race_TS_1/Solver2005-results.txt
 un-gz SAT-Race_TS_1/velev-pipe-uns-1.0-08.cnf.gz
 un-gz SAT-Race_TS_1/manol-pipe-g10idw.cnf.gz
 un-gz SAT-Race_TS_1/velev-pipe-uns-1.1-07.cnf.gz
